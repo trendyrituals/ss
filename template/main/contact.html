@@ -1,0 +1,34 @@
+{% extends 'main/bash.html' %}
+{% load crispy_forms_tags %}
+
+ {% block containt %}
+ <h1>Contact Us</h1>
+
+
+ <div class="row">
+
+ 	<div class="col-sm-6 row">
+
+ 		<div class="col-sm-3"></div>
+ 		<div class="col-sm-6">
+			<form action="">{% csrf_token %}
+				{{ form|crispy }}
+				<input class="btn btn-secondary" type="submit" value="Send">
+			</form>
+ 		</div>
+ 		<div class="col-sm-3"></div>
+ 		
+ 	</div>
+
+ 	<div class="col-sm-6">
+ 		<p>
+ 			<i class="fa fa-map-marker" aria-hidden="true"></i> Plot no:- 4/2b chitrakoot vaishali nagar <br>
+ 			 near sheiby hospital <br>
+ 			 jaipur (raj) , India<br>
+ 			 pin code:- 302021
+ 			</p>
+ 	</div>
+
+ </div>
+  
+ {% endblock containt %}
